@@ -17,6 +17,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,16 +40,26 @@
       <button id="search-current-location">Search current location</button>
     </form>
      --> 
-    <h2 id="current-date">Sunday, February 6</h2>
    
     <h2 id="city-name">Boston</h2>
-    <h3 class="current-weather" id="current-weather">20°</h3>
 
+<div class="overview">
+  <h2 id="current-date">Sunday, February 6</h2>
+  <h2 id="weather-description">Clear skies and sunny</h2>
 
 <div class="row">
     <div class="col-md-6">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="">
-    20°C | °F
+      <div class="clearfix weather-temperature">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt=""class="float-left">
+      <div class="current-temp">
+        <div class="float-left">
+        20
+         </div>
+          </div>
+          <div class="units">
+        <a href="#">°C</a>  | <a href="#">°F</a>
+        </div>
+         </div>
     </div>
     <div class="col-md-6">
 <ul>
@@ -63,12 +75,9 @@
 </ul>
     </div>
     </div>
-    <a href="https://github.com/sarahkatedc/SK-plus-project"
-      >Open source code</a
-    >
-    by: Sarah Kate Davidson-Catalano
-    <script src="src/script.js"></script>
     </div>
+    </div>
+    
 
 
 <!-- 
@@ -118,8 +127,14 @@
         <div class="emoji">🌤</div>
       </div> 
     </div> --> 
-
-    
+<div class="code-links">
+     <a href="https://github.com/sarahkatedc/SK-plus-project"
+      >Open source code</a
+    >
+    by: Sarah Kate Davidson-Catalano
+    <script src="src/script.js"></script>
+</div>
     </div>
+
   </body>
 </html>
