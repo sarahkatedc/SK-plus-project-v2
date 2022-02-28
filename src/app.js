@@ -75,15 +75,28 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-let form = document.querySelector("#city-search");
-form.addEventListener("submit", handleSubmit);
+let celciusTemperature = null;
 
 function displayFarenheitTemperature(event) {
   event.preventDefault();
-  let farenheitTemperature = (14 * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#current-temp");
+  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let form = document.querySelector("#city-search");
+form.addEventListener("submit", handleSubmit);
+
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", displayFarenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
+
+search("Boston");
