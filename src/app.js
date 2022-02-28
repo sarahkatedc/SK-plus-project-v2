@@ -77,3 +77,19 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#city-search");
 form.addEventListener("submit", handleSubmit);
+
+
+function displayFarenheitTemperature(event); {
+    event.preventDefault();
+let farenheitTemperature = (14 * 9)/5 + 32;
+alert(farenheitTemperature);
+let temperatureElement = document.querySelector("#current-temp");
+temperatureElement.innerHTML = Math.round(farenheitTemperature);
+}
+
+let form = document.querySelector("#city-search");
+form.addEventListener("submit", handleSubmit);
+
+let farenheitLink = document.querySelector("#farenheit-link")
+farenheitLink.addEventListener("click", displayFarenheitTemperature);
+
