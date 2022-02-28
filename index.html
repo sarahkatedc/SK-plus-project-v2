@@ -28,18 +28,23 @@
     />
   <body>
       <div class="contrainer">
-          <div class="weather-app">
-  <!--   <form id="city-search">
+          <div class="weather-app" class="mb-3">
+<form id="city-search">
+<div class="row">
+  <div class="col-9">
       <input
-        class="search"
-        type="text"
+        class="form-control"
+        type="search"
         placeholder="Search by city name here"
         id="city-input"
       />
-      <input class="search" type="submit" value="Search" />
-      <button id="search-current-location">Search current location</button>
+      </div>
+      <div class="col-3">
+      <input type="submit" value="Search" class="btn btn-primary w-100" />
+      </div>
+      </div>
     </form>
-     --> 
+    
    
     <h2 id="city-name">Boston</h2>
 
@@ -51,14 +56,14 @@
     <div class="col-md-6">
       <div class="clearfix weather-temperature">
         <img src="" alt=""class="float-left" id ="icon">
-      <div id="current-temp">
-        <div class="float-left">
+      <div >
+        <div id="current-temp" class="float-left">
         20
          </div>
           </div>
-          <div class="units">
+          <span class="units">
         <a href="#">°C</a>  | <a href="#">°F</a>
-        </div>
+          </span>
          </div>
     </div>
     <div class="col-md-6">
